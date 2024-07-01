@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftcollectiondifference",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dmitriykotenko/SwiftCollectionDifference.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "705021f684396812e9b3ac2f6683635d544fb0e1"
+      }
+    }
+  ],
+  "version" : 2
+}

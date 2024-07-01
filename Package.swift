@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
   name: "swift-custom-dump",
   platforms: [
-    .iOS(.v13),
+    .iOS(.v12),
     .macOS(.v10_15),
     .tvOS(.v13),
     .watchOS(.v6),
@@ -16,11 +16,15 @@ let package = Package(
       targets: ["CustomDump"]
     )
   ],
-  dependencies: [],
+  dependencies: [
+    .package(url: "https://github.com/dmitriykotenko/SwiftCollectionDifference.git", branch: "main")
+  ],
   targets: [
     .target(
       name: "CustomDump",
-      dependencies: []
+      dependencies: [
+        "SwiftCollectionDifference"
+      ]
     ),
     .testTarget(
       name: "CustomDumpTests",

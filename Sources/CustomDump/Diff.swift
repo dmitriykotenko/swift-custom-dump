@@ -1,3 +1,5 @@
+import SwiftCollectionDifference
+
 /// Detects differences between two given values by comparing their mirrors and optionally returns
 /// a formatted string describing it.
 ///
@@ -212,7 +214,7 @@ public func diff<T>(_ lhs: T, _ rhs: T, format: DiffFormat = .default) -> String
         rhsChildren.sort(by: areInIncreasingOrder)
       }
 
-      let difference = rhsChildren.difference(from: lhsChildren, by: areEquivalent)
+      let difference = rhsChildren.getDifference(from: lhsChildren, by: areEquivalent)
 
       var lhsOffset = 0
       var rhsOffset = 0
