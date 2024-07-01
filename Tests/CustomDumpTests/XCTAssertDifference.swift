@@ -1,4 +1,6 @@
-import XCTestDynamicOverlay
+import XCTest
+
+import CustomDump
 
 /// Asserts that a value has a set of changes.
 ///

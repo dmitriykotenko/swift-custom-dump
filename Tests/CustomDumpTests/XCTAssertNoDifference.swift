@@ -1,4 +1,6 @@
-import XCTestDynamicOverlay
+import XCTest
+
+import CustomDump
 
 /// Asserts that two values have no difference.
 ///
