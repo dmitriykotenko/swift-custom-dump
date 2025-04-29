@@ -245,7 +245,7 @@ final class FoundationTests: XCTestCase {
     )
 
     #if !os(Windows) && !os(WASI)
-      class SubclassedError: NSError {}
+    class SubclassedError: NSError, @unchecked Sendable {}
 
       dump = ""
       customDump(
