@@ -24,12 +24,24 @@ let package = Package(
       name: "CustomDump",
       dependencies: [
         "SwiftCollectionDifference"
+      ],
+      swiftSettings: [
+        .unsafeFlags([
+          "-Xfrontend",
+          "-disable-round-trip-debug-types"
+        ], .when(configuration: .debug))
       ]
     ),
     .testTarget(
       name: "CustomDumpTests",
       dependencies: [
         "CustomDump"
+      ],
+      swiftSettings: [
+        .unsafeFlags([
+          "-Xfrontend",
+          "-disable-round-trip-debug-types"
+        ], .when(configuration: .debug))
       ]
     ),
   ]
